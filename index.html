@@ -7,11 +7,12 @@
   <title>DomusTheDev — Roblox Scripter</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="showcase.css">
+  <link rel="stylesheet" href="services.css">
 </head>
 <body>
   <nav class="nav wrap">
     <a class="brand" href="#top">DOMUS<span>THEDEV</span></a>
-    <div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <div class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#tutoring">Tutoring</a><a href="#contact">Contact</a></div>
     <a class="button mini" href="#contact">Let's work</a>
   </nav>
 
@@ -64,11 +65,30 @@
       <div><p class="about-copy">I build clear systems that are enjoyable to use, sensible to maintain, and feel at home in your game. Whether it's a focused fix or a new mechanic from scratch, I keep communication straightforward.</p><div class="skills"><span>✦ Game systems</span><span>✦ UI functionality</span><span>✦ Client / server scripting</span><span>✦ Bug fixing</span><span>✦ DataStoreService</span><span>✦ ModuleScripts</span></div></div>
     </section>
 
+    <section class="services dark" id="services"><div class="wrap">
+      <div class="heading"><div><p class="eyebrow">Commissions</p><h2>What I can<br><em>script for you.</em></h2></div><p class="section-intro">I take focused Roblox scripting commissions and build systems that are clear, reliable, and ready to grow with your game.</p></div>
+      <div class="service-grid">
+        <article><h3>Core game systems</h3><ul><li>Shop and purchasing systems</li><li>Currency and leaderstats</li><li>Inventory systems</li><li>Round systems</li><li>DataStoreService</li></ul></article>
+        <article><h3>Player experience</h3><ul><li>GUI functionality</li><li>Gameplay mechanics</li><li>Hitboxes</li><li>Dialogue and cutscenes</li><li>Ability and skill systems</li></ul></article>
+        <article><h3>Reliable code</h3><ul><li>Client/server scripting</li><li>ModuleScripts</li><li>ProximityPrompt systems</li><li>Bug fixing</li><li>Optimisation and cleanup</li></ul></article>
+      </div>
+    </div></section>
+
+    <section class="tutoring wrap" id="tutoring">
+      <div><p class="eyebrow">1-on-1 tutoring</p><h2>Learn the why,<br><em>not just the code.</em></h2></div>
+      <div class="tutoring-copy"><p>I explain what the code does, why it works, and how you can build it yourself. You can also get practice challenges so you actually improve—not just copy scripts.</p><div class="topic-list"><span>Luau / Roblox scripting</span><span>Tables and functions</span><span>RemoteEvents &amp; BindableEvents</span><span>DataStoreService</span><span>Game systems</span><span>Debugging &amp; optimisation</span></div><p class="muted">Great for beginners and developers who know the basics but get stuck on bigger systems.</p></div>
+    </section>
+
+    <section class="details"><div class="wrap detail-grid">
+      <div><p class="eyebrow">Pricing</p><h3>Scripting commissions start at <em>$15.</em></h3><p>Pricing depends on the complexity. I prefer working per task or system.</p></div>
+      <div><p class="eyebrow">Availability</p><h3>Active on weekends, available on weekdays.</h3><p>Message me with your project details, budget, deadline, and requirements.</p></div>
+      <div><p class="eyebrow">Current limits</p><p>I do not currently take extremely complex combat frameworks, advanced AI, large procedural generation, complex networking, advanced anti-cheat, or large OOP/metatable frameworks.</p><p>Not sure if your project fits? DM me—I’ll be honest.</p></div>
+    </div></section>
+
     <section class="contact" id="contact"><div class="wrap">
       <p class="eyebrow">Have a project in mind?</p><h2>Let's make something<br><em>players remember.</em></h2>
-      <!-- Change this email to your real commission contact. -->
-      <a class="button black" href="mailto:hello@example.com">Get in touch <b>↗</b></a>
-      <p class="note">Replace the email in index.html with your real commission contact.</p>
+      <button class="button black discord-copy" type="button" data-discord="Domusthedev.">Copy Discord username <b>↗</b></button>
+      <p class="note"><strong>Discord: Domusthedev.</strong><br>For commissions: what you need, budget, deadline, and requirements.<br>For tutoring: what you are learning, where you are stuck, and what you want to learn.</p>
     </div></section>
   </main>
   <footer class="wrap"><span>© 2026 DomusTheDev</span><span>Roblox Scripter · Portfolio</span></footer>
@@ -81,6 +101,11 @@
       } catch {
         video.querySelector("span").textContent = "View project on YouTube";
       }
+    });
+    document.querySelector(".discord-copy").addEventListener("click", async (event) => {
+      const button = event.currentTarget;
+      await navigator.clipboard.writeText(button.dataset.discord);
+      button.firstChild.textContent = "Discord copied! ";
     });
   </script>
 </body>
